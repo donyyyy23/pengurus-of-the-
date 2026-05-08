@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Pengurus of the Month – HIMASTA Kabinet Visionary</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  .winner-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+.winner-list li {
+  font-size: 14.5px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.winner-list li::before {
+  content: '•';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+  :root {
+    --bg:#0a0a0f; --bg2:#111118; --accent:#e8315a; --accent2:#ff6b8a;
+    --pink-border:rgba(232,49,90,0.5); --white:#ffffff; --gray:#8a8a9a; --card-bg:#13131e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden}
+
+  /* NAV */
+  nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:200;background:rgba(20,20,30,0.88);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-radius:50px;padding:8px 32px;display:flex;align-items:center;gap:20px;border:1px solid rgba(255,255,255,0.08)}
+  .nav-links{display:flex;gap:32px;list-style:none}
+  .nav-links a{color:var(--white);text-decoration:none;font-size:14px;font-weight:500;opacity:.85;transition:opacity .2s}
+  .nav-links a:hover{opacity:1}
+  .nav-back{background:linear-gradient(135deg,var(--accent),#c0183a)!important;color:#fff!important;opacity:1!important;padding:8px 18px!important;border-radius:20px!important;font-weight:600!important;font-size:13px!important;border:1.5px solid rgba(232,49,90,.5);box-shadow:0 0 14px rgba(232,49,90,.3);transition:transform .2s,box-shadow .2s!important}
+  .nav-back:hover{transform:translateY(-1px)!important;box-shadow:0 0 22px rgba(232,49,90,.5)!important}
+
+  /* MOBILE NAV */
+  .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;z-index:400;background:rgba(10,10,15,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);padding:0 16px;height:60px;align-items:center;justify-content:space-between}
+  .mobile-logo-text{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px}
+  .mobile-logo-text span{color:var(--accent)}
+  .hamburger{width:38px;height:38px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px}
+  .hamburger span{display:block;width:18px;height:1.5px;background:var(--white);border-radius:2px;transition:all .3s}
+  .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;z-index:399;background:rgba(10,10,15,.98);border-bottom:1px solid rgba(255,255,255,.07);padding:16px;flex-direction:column;gap:4px}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{color:var(--white);text-decoration:none;font-size:15px;font-weight:500;padding:12px 16px;border-radius:10px;opacity:.85;transition:background .2s}
+  .mobile-menu a:hover{background:rgba(255,255,255,.05);opacity:1}
+
+  /* HERO */
+  .hero{position:relative;min-height:55vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:130px 20px 80px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,.65) 60%,rgba(10,10,15,1) 100%),linear-gradient(135deg,#0a0a0f 0%,#1a0820 40%,#0a0a0f 100%);z-index:0}
+  .hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 15% 50%,rgba(232,49,90,.14) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 85% 30%,rgba(100,20,200,.1) 0%,transparent 60%)}
+  .hero-content{position:relative;z-index:1}
+  .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:16px;animation:fadeUp .7s ease both}
+  .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,10vw,140px);line-height:.9;letter-spacing:2px;text-shadow:0 4px 40px rgba(0,0,0,.6);animation:fadeUp .9s .1s ease both}
+  .hero-title span{color:var(--accent)}
+  .hero-sub{font-size:clamp(14px,2.2vw,16px);font-weight:400;color:rgba(255,255,255,.6);margin-top:20px;max-width:500px;line-height:1.7;margin-left:auto;margin-right:auto;animation:fadeUp .9s .25s ease both}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,49,90,.12);border:1px solid rgba(232,49,90,.35);border-radius:100px;padding:8px 18px;font-size:13px;font-weight:600;color:var(--accent2);margin-top:28px;animation:fadeUp .9s .4s ease both}
+  .hero-badge .dot{width:7px;height:7px;background:var(--accent);border-radius:50%;animation:pulse 1.6s ease infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+
+  /* TICKER */
+  .ticker-wrap{background:#0f0f18;border-top:1px solid rgba(255,255,255,.06);padding:18px 0;overflow:hidden}
+  .ticker-track{display:flex;gap:64px;animation:ticker 22s linear infinite;width:max-content}
+  .ticker-item{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600;letter-spacing:1px;color:rgba(255,255,255,.7);white-space:nowrap}
+  @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* MONTH TABS */
+  .month-section{padding:56px 8vw 0;background:var(--bg)}
+  .month-tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:56px}
+  .month-tab{padding:9px 22px;border-radius:100px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.6);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:.3px}
+  .month-tab:hover{background:rgba(232,49,90,.1);border-color:rgba(232,49,90,.3);color:var(--accent2)}
+  .month-tab.active{background:linear-gradient(135deg,var(--accent),#c0183a);border-color:var(--accent);color:#fff;box-shadow:0 0 18px rgba(232,49,90,.4)}
+
+  /* WINNER SPOTLIGHT */
+  .spotlight-section{padding:0 8vw 80px;background:var(--bg)}
+  .month-group{display:none}
+  .month-group.active{display:block}
+  .month-label{text-align:center;margin-bottom:48px}
+  .month-label-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+  .month-label-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);line-height:1}
+
+  /* WINNER CARD */
+  .winner-card{background:var(--card-bg);border:1.5px solid var(--pink-border);border-radius:28px;overflow:hidden;display:grid;grid-template-columns:380px 1fr;max-width:900px;margin:0 auto 40px;position:relative;transition:transform .3s,box-shadow .3s}
+  .winner-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(232,49,90,.18)}
+  .winner-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top left,rgba(232,49,90,.1) 0%,transparent 60%);pointer-events:none;z-index:0}
+
+  .winner-photo-wrap{position:relative;z-index:1;background:linear-gradient(135deg,#1a0820 0%,#2d1040 50%,#0d0820 100%);display:flex;align-items:stretch;justify-content:center;min-height:380px;overflow:hidden}
+  .winner-photo-wrap::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(232,49,90,.2) 0%,transparent 65%);pointer-events:none}
+  .winner-photo{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .winner-photo-placeholder{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:380px;position:relative;z-index:1}
+  .avatar-ring{width:130px;height:130px;border-radius:50%;background:rgba(232,49,90,.12);border:2px solid rgba(232,49,90,.4);display:flex;align-items:center;justify-content:center;font-size:52px}
+  .avatar-name{font-family:'Bebas Neue',sans-serif;font-size:13px;color:rgba(255,255,255,.35);letter-spacing:3px;text-align:center;padding:0 20px}
+
+  .winner-crown{position:absolute;top:16px;left:16px;z-index:2;background:linear-gradient(135deg,#f6c544,#e8a000);border-radius:100px;padding:6px 14px;font-size:12px;font-weight:700;color:#3a2000;display:flex;align-items:center;gap:6px;box-shadow:0 4px 16px rgba(230,160,0,.4)}
+
+  .winner-info{position:relative;z-index:1;padding:40px 36px 36px;display:flex;flex-direction:column;justify-content:center}
+  .winner-tag{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .winner-name{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:700;line-height:1.1;margin-bottom:6px}
+  .winner-divisi{font-size:14px;font-weight:600;color:var(--accent2);margin-bottom:24px;display:flex;align-items:center;gap:8px}
+  .winner-divisi::before{content:'';display:block;width:20px;height:2px;background:var(--accent);border-radius:2px}
+  .winner-desc{font-size:14.5px;color:rgba(255,255,255,.6);line-height:1.75;margin-bottom:28px}
+  .winner-stats{display:flex;gap:24px;margin-bottom:28px;flex-wrap:wrap}
+  .stat-item{display:flex;flex-direction:column;gap:3px}
+  .stat-value{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700}
+  .stat-value em{font-style:normal;font-size:16px;color:var(--accent)}
+  .stat-label{font-size:11px;color:var(--gray);letter-spacing:.5px;text-transform:uppercase}
+  .winner-achievements{display:flex;flex-wrap:wrap;gap:8px}
+  .achievement-pill{display:inline-flex;align-items:center;gap:5px;background:rgba(232,49,90,.08);border:1px solid rgba(232,49,90,.25);border-radius:100px;padding:5px 13px;font-size:12px;font-weight:500;color:rgba(255,255,255,.7)}
+  .pill-dot{width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0}
+
+  /* COMING SOON */
+  .coming-soon{text-align:center;padding:80px 20px}
+  .cs-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,60px);color:rgba(255,255,255,.18);margin-bottom:12px}
+  .cs-sub{font-size:14px;color:var(--gray)}
+
+  /* RUNNERS */
+
+  /* FOOTER */
+  footer{background:#07070e;padding:48px 8vw;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.05)}
+  .footer-brand{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:1px}
+  .footer-brand span{color:var(--accent)}
+  .footer-links{display:flex;gap:28px;list-style:none}
+  .footer-links a{color:var(--gray);text-decoration:none;font-size:13px;transition:color .2s}
+  .footer-links a:hover{color:var(--white)}
+  .footer-copy{font-size:12px;color:var(--gray)}
+
+  /* ANIM */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+  .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    nav{display:none!important}
+    .mobile-nav{display:flex}
+    .hero{padding:90px 20px 60px}
+    .winner-card{grid-template-columns:1fr;max-width:480px}
+    .winner-photo-wrap{min-height:260px}
+    .winner-info{padding:26px 22px}
+      footer{flex-direction:column;gap:20px;text-align:center;padding:40px 20px 60px}
+    .footer-links{flex-wrap:wrap;justify-content:center;gap:16px}
+  }
+  @media(max-width:560px){
+      .winner-stats{gap:16px}
+    .stat-value{font-size:22px}
+  }
+</style>
+</head>
+<body>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav">
+  <div class="mobile-logo-text">HIMASTA <span>VISIONARY</span></div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://himasta.vercel.app/" onclick="closeMenu()">← Kembali ke Beranda</a>
+  <a href="#spotlight" onclick="closeMenu()">Pemenang Bulanan</a>
+</div>
+
+<!-- DESKTOP NAVBAR -->
+<nav>
+  <ul class="nav-links">
+    <li><a href="https://himasta.vercel.app/" class="nav-back">← Beranda</a></li>
+    <li><a href="#spotlight">Pemenang</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Apresiasi Kabinet Visionary · HIMASTA USK</div>
+    <h1 class="hero-title">PENGURUS OF<br>THE <span>MONTH</span></h1>
+    <p class="hero-sub">
+      Apresiasi untuk pengurus yang paling aktif dan berdedikasi setiap bulannya — baik dalam kepanitiaan, kegiatan, maupun keterlibatan di media sosial HIMASTA.
+    </p>
+    <div class="hero-badge">
+      <div class="dot"></div>
+      Diumumkan setiap bulan oleh HIMASTA
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <div class="ticker-item">Pengurus of the Month</div>
+    <div class="ticker-item">✦</div>
+    <div class="ticker-item">Apresiasi & Dedikasi</div>
+    <div class="ticker-item">✦</div>
+    <div class="ticker-item">Kabinet Visionary</div>
+    <div class="ticker-item">✦</div>
+    <div class="ticker-item">HIMASTA FMIPA USK</div>
+    <div class="ticker-item">✦</div>
+    <div class="ticker-item">Kesejahteraan Mahasiswa</div>
+    <div class="ticker-item">✦</div>
+    <div class="ticker-item">Pengurus of the Month</div>
+    <div class="ticker-item">✦</div>
+    <div class="ticker-item">Apresiasi & Dedikasi</div>
+    <div class="ticker-item">✦</div>
+    <div class="ticker-item">Kabinet Visionary</div>
+    <div class="ticker-item">✦</div>
+    <div class="ticker-item">HIMASTA FMIPA USK</div>
+    <div class="ticker-item">✦</div>
+    <div class="ticker-item">Kesejahteraan Mahasiswa</div>
+    <div class="ticker-item">✦</div>
+  </div>
+</div>
+
+<!-- MONTH TABS -->
+<div class="month-section" id="spotlight">
+  <div class="month-tabs">
+    <button class="month-tab active" onclick="switchMonth('apr')">April</button>
+    <button class="month-tab" onclick="switchMonth('mei')">Mei</button>
+    <button class="month-tab" onclick="switchMonth('jun')">Juni</button>
+    <button class="month-tab" onclick="switchMonth('jul')">Juli</button>
+    <button class="month-tab" onclick="switchMonth('agt')">Agustus</button>
+    <button class="month-tab" onclick="switchMonth('sep')">September</button>
+    <button class="month-tab" onclick="switchMonth('okt')">Oktober</button>
+    <button class="month-tab" onclick="switchMonth('nov')">November</button>
+    <button class="month-tab" onclick="switchMonth('des')">Desember</button>
+  </div>
+</div>
+
+<!-- SPOTLIGHT -->
+<div class="spotlight-section">
+
+  <!-- COMING SOON: Apr – Des -->
+  <div class="month-group active" id="group-apr">
+  <div class="month-label reveal">
+    <div class="month-label-eyebrow">Pengurus of the Month</div>
+    <div class="month-label-title">April 2026</div>
+  </div>
+  <div class="winner-card reveal">
+    <div class="winner-photo-wrap">
+      <img class="winner-photo" src="april.png" alt="Rauzatul Jannah">
+    </div>
+    <div class="winner-info">
+      <div class="winner-tag">Pengurus of the Month · April 2026</div>
+      <div class="winner-name">Rauzatul Jannah</div>
+      <div class="winner-divisi">Departemen Kesejahteraan Mahasiswa (KESMA)</div>
+      <p class="winner-desc">
+        Halo Sobat Himasta! Selamat kepada Rauzatul Jannah dari Departemen Kesma yang terpilih sebagai Pengurus of The Month bulan April.
+        Penghargaan ini diberikan sebagai bentuk apresiasi atas dedikasi dan kontribusi aktif yang telah ditunjukkan selama kepengurusan bulan April, di antaranya:
+      </p>
+      <ul class="winner-list">
+        <li>PJ divisi humas Pelantikan Himasta</li>
+        <li>Anggota divisi acara Raker</li>
+        <li>Anggota divisi konsumsi Pelatihan Surat Menyurat</li>
+      </ul>
+    </div>
+  </div>
+</div>
+      </div>
+      <div class="winner-achievements">
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="month-group" id="group-mei"><div class="coming-soon reveal"><div class="cs-title">MEI 2026</div><div class="cs-sub">Belum diumumkan — pantau terus!</div></div></div>
+  <div class="month-group" id="group-jun"><div class="coming-soon reveal"><div class="cs-title">JUNI 2026</div><div class="cs-sub">Belum diumumkan — pantau terus!</div></div></div>
+  <div class="month-group" id="group-jul"><div class="coming-soon reveal"><div class="cs-title">JULI 2026</div><div class="cs-sub">Belum diumumkan — pantau terus!</div></div></div>
+  <div class="month-group" id="group-agt"><div class="coming-soon reveal"><div class="cs-title">AGUSTUS 2026</div><div class="cs-sub">Belum diumumkan — pantau terus!</div></div></div>
+  <div class="month-group" id="group-sep"><div class="coming-soon reveal"><div class="cs-title">SEPTEMBER 2026</div><div class="cs-sub">Belum diumumkan — pantau terus!</div></div></div>
+  <div class="month-group" id="group-okt"><div class="coming-soon reveal"><div class="cs-title">OKTOBER 2026</div><div class="cs-sub">Belum diumumkan — pantau terus!</div></div></div>
+  <div class="month-group" id="group-nov"><div class="coming-soon reveal"><div class="cs-title">NOVEMBER 2026</div><div class="cs-sub">Belum diumumkan — pantau terus!</div></div></div>
+  <div class="month-group" id="group-des"><div class="coming-soon reveal"><div class="cs-title">DESEMBER 2026</div><div class="cs-sub">Belum diumumkan — pantau terus!</div></div></div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">HIMPUNAN <span>MAHASISWA STATISTIKA</span></div>
+  <ul class="footer-links">
+    <li><a href="https://himasta.vercel.app/">Beranda</a></li>
+    <li><a href="https://himasta.vercel.app/#divisi">Event</a></li>
+    <li><a href="https://himasta.vercel.app/#about">About Us</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 HIMPUNAN MAHASISWA STATISTIKA</div>
+</footer>
+
+<script>
+  // Mobile menu
+  function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');document.getElementById('hamburger').classList.toggle('open')}
+  function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('hamburger').classList.remove('open')}
+  document.addEventListener('click',function(e){const nav=document.querySelector('.mobile-nav');const menu=document.getElementById('mobileMenu');if(!nav.contains(e.target)&&!menu.contains(e.target))closeMenu()});
+
+  // Month switcher
+  const months=['apr','mei','jun','jul','agt','sep','okt','nov','des'];
+  function switchMonth(key){
+    // update tabs
+    document.querySelectorAll('.month-tab').forEach((t,i)=>t.classList.toggle('active',months[i]===key));
+    // update groups
+    months.forEach(m=>{const g=document.getElementById('group-'+m);if(g)g.classList.toggle('active',m===key)});
+    // re-trigger reveal
+    setTimeout(()=>{
+      const els=document.querySelectorAll('#group-'+key+' .reveal');
+      els.forEach(el=>{el.classList.remove('visible');setTimeout(()=>el.classList.add('visible'),60)});
+    },10);
+  }
+
+  // Scroll reveal
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
