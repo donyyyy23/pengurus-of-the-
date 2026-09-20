@@ -230,8 +230,7 @@
     <button class="month-tab active" onclick="switchMonth('apr')">April</button>
     <button class="month-tab" onclick="switchMonth('mei')">Mei</button>
     <button class="month-tab" onclick="switchMonth('jun')">Juni</button>
-    <button class="month-tab" onclick="switchMonth('jul')">Juli</button>
-    <button class="month-tab" onclick="switchMonth('agt')">Agustus</button>
+    <button class="month-tab" onclick="switchMonth('jul')">Juli–Agustus</button>
     <button class="month-tab" onclick="switchMonth('sep')">September</button>
     <button class="month-tab" onclick="switchMonth('okt')">Oktober</button>
     <button class="month-tab" onclick="switchMonth('nov')">November</button>
@@ -327,10 +326,30 @@
 
   <!-- JULI -->
   <div class="month-group" id="group-jul">
-    <div class="coming-soon reveal">
-      <div class="cs-title">JULI 2026</div>
-      <div class="cs-sub">Belum diumumkan — pantau terus!</div>
+    <div class="month-label reveal">
+      <div class="month-label-eyebrow">Pengurus of the Month</div>
+      <div class="month-label-title">Juni 2026</div>
     </div>
+    <div class="winner-card reveal">
+      <div class="winner-photo-wrap">
+        <img class="winner-photo" src="juli.jpg" alt="Annisa Delvita Rizky">
+      </div>
+      <div class="winner-info">
+        <div class="winner-tag">Pengurus of the Month · Juli-Agustus 2026</div>
+        <div class="winner-name">Annisa Delvita Rizky</div>
+        <div class="winner-divisi"> Departemen Sosmas </div>
+        <p class="winner-desc">
+          Halo Sobat Himasta! Selamat kepada Annisa Delvita Rizky dari Departemen Sosmas yang terpilih sebagai Pengurus of The Month Periode Juli–Agustus. 
+          Penghargaan ini diberikan sebagai bentuk apresiasi atas dedikasi dan kontribusi aktif yang telah ditunjukkan selama kepengurusan, di antaranya:
+        </p>
+        <ul class="winner-list">
+          <li> Bendahara Statistika Mengabdi</li>
+          <li>PJ Divisi Dekorasi Pakarmaru</li>
+          <li>Anggota Divisi Acara Himasta Global Connect</li>
+        </ul>
+      </div>
+    </div>
+    <div class="winner-achievements"></div>
   </div>
 
   <!-- AGUSTUS -->
@@ -393,7 +412,7 @@
   document.addEventListener('click',function(e){const nav=document.querySelector('.mobile-nav');const menu=document.getElementById('mobileMenu');if(!nav.contains(e.target)&&!menu.contains(e.target))closeMenu()});
 
   // Month switcher
-  const months=['apr','mei','jun','jul','agt','sep','okt','nov','des'];
+  const months=['apr','mei','jun','jul','sep','okt','nov','des'];
   function switchMonth(key){
     // update tabs
     document.querySelectorAll('.month-tab').forEach((t,i)=>t.classList.toggle('active',months[i]===key));
